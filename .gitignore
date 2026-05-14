@@ -1,0 +1,29 @@
+#UE5 Project Base
+
+.vs
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+
+.vsconfig
+.vscode
+*.sln
+
+# lfs
+hooks/
+lfs/
+
+# Python
+_pycache_
+
+# External
+*.VC.db
+*.opensdf
+*.opendb
+*.sdf
+
+*.suo
+*.xcodeproj
+*.xcworkspace
