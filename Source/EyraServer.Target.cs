@@ -7,8 +7,11 @@ public class EyraServerTarget : TargetRules
 	public EyraServerTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Server;
-		DefaultBuildSettings = BuildSettingsVersion.V6;
-		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_7;
 		ExtraModuleNames.Add("EyraGame");
-	}
+
+        EyraGameTarget.ApplySharedEyraTargetSettings(this);
+
+        // 是否在测试版本/发布版本开启检查（断言）功能
+        bUseChecksInShipping = true; // 发布版本开启断言功能
+    }
 }
