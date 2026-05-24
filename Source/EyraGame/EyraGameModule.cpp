@@ -1,4 +1,4 @@
-// Copyright Enhoney.
+﻿// Copyright Enhoney. All Rights Reserved
 
 #include "Modules/ModuleManager.h"
 

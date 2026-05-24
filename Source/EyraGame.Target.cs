@@ -1,4 +1,4 @@
-// Copyright Enhoney.
+﻿// Copyright Enhoney. All Rights Reserved
 
 using UnrealBuildTool;
 using System;

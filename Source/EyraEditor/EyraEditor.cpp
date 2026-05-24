@@ -1,4 +1,4 @@
-// Copyright Enhoney.
+﻿// Copyright Enhoney. All Rights Reserved
 
 #include "EyraEditor.h"
 #include "Modules/ModuleManager.h"
