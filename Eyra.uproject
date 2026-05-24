@@ -5,8 +5,17 @@
 	"Description": "",
 	"Modules": [
 		{
-			"Name": "Eyra",
+			"Name": "EyraGame",
 			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"DeveloperSettings",
+				"Engine"
+			]
+		},
+		{
+			"Name": "EyraEditor",
+			"Type": "Editor",
 			"LoadingPhase": "Default"
 		}
 	],

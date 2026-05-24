@@ -3,13 +3,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class EyraEditorTarget : TargetRules
+public class EyraClientTarget : TargetRules
 {
-	public EyraEditorTarget( TargetInfo Target) : base(Target)
+	public EyraClientTarget(TargetInfo Target) : base(Target)
 	{
-		Type = TargetType.Editor;
+		Type = TargetType.Client;
 		DefaultBuildSettings = BuildSettingsVersion.V6;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_7;
-		ExtraModuleNames.AddRange(new string[] {"EyraGame", "EyraEditor"});
+		ExtraModuleNames.Add("EyraGame");
 	}
 }

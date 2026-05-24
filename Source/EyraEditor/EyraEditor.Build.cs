@@ -2,15 +2,39 @@
 
 using UnrealBuildTool;
 
-public class Eyra : ModuleRules
+public class EyraEditor : ModuleRules
 {
-	public Eyra(ReadOnlyTargetRules Target) : base(Target)
+	public EyraEditor(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+		
+		PublicIncludePaths.AddRange(
+			new string[] {
+				"EyraEditor",
+			}
+		);
+		
+		PrivateIncludePaths.AddRange(
+			new string[] {
+			}
+		);
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
+		PublicDependencyModuleNames.AddRange(
+			new string[] {
+				"Core",
+				"CoreUObject",
+				"Engine",
+				"EyraGame"
+			}
+		);
 
-		PrivateDependencyModuleNames.AddRange(new string[] {  });
+		PrivateDependencyModuleNames.AddRange(
+			new string[] {
+				"InputCore",
+				"Slate",
+				"SlateCore"
+			}
+		);
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
