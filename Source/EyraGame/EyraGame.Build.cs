@@ -69,7 +69,7 @@ public class EyraGame : ModuleRules
 				"SignificanceManager",
 
 				// 热修复
-				"Hotix",
+				"Hotfix",
 
 				// 通用加载屏幕管理
 				"CommonLoadingScreen",
