@@ -56,7 +56,7 @@ public class EyraEditor : ModuleRules
 
 				// Eyra游戏本身的运行时模块（依赖游戏逻辑）
 				"EyraGame"
-			}
+            }
 		);
 
 		PrivateDependencyModuleNames.AddRange(
