@@ -3,6 +3,10 @@
 #include "EyraEditor.h"
 #include "Modules/ModuleManager.h"
 
+#define LOCTEXT_NAMESPACE "EyraEditor"
+
+DEFINE_LOG_CATEGORY(LogEyraEditor);
+
 /**
 * FEyraEditorModule
 */
@@ -19,3 +23,6 @@ class FEyraEditorModule : public FDefaultGameModuleImpl
 };
 
 IMPLEMENT_MODULE(FEyraEditorModule, EyraEditor);
+
+
+#undef LOCTEXT_NAMESPACE
