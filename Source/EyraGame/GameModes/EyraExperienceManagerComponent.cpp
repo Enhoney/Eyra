@@ -310,10 +310,8 @@ void UEyraExperienceManagerComponent::StartExperienceLoad()
 	// 需要传递这些Bundles
 	TArray<FName> BundlesToLoad;
 
-	// @TODO：这里添加了资产管理类里面的一个全局变量，他是个Bundle规则
-	// BundlesToLoad.Add(FEyraBundles:Equipped);
-	// 目前我们还没有定义它，所以先直接使用字符串占位即可，后面编写资产管理类的时候再改回来
-	BundlesToLoad.Add(TEXT("Equipped"));
+	// 这里添加了资产管理类里面的一个全局变量，他是个Bundle规则
+	BundlesToLoad.Add(FEyraBundles::Equipped);
 
 	// TODO：将此客户端/服务器相关的内容集中到"EyraAssetManager"中
 
@@ -545,7 +543,7 @@ void UEyraExperienceManagerComponent::OnExperienceFullLoadCompleted()
 		{
 			if (Action != nullptr)
 			{
-				//@TODO: The fact that these don't take a world are potentially problematic in client-server PIE
+				// TODO: The fact that these don't take a world are potentially problematic in client-server PIE
 				// The current behavior matches systems like gameplay tags where loading and registering apply to the entire process,
 				// but actually applying the results to actors is restricted to a specific world
 				// TODO：这些不需要一个世界的事实，在客户端-服务器 PIE 中可能会有问题，目前的行为与游戏玩法标签等系统相匹配，其中加载和注册适用于整个过程，但实际上将结果应用于Actor仅限于特定世界
@@ -600,10 +598,10 @@ void UEyraExperienceManagerComponent::OnActionDeactivationCompleted()
 
 void UEyraExperienceManagerComponent::OnAllActionsDeactivated()
 {
-	//@TODO: We actually only deactivated and didn't fully unload...
+	// TODO: We actually only deactivated and didn't fully unload...
 	// TODO：实际上我们只是暂时停用了，并没有卸载
 	LoadState = EEyraExperienceLoadState::Unloaded;
 	CurrentExperience = nullptr;
-	//@TODO:	GEngine->ForceGarbageCollection(true);
+	// TODO:	GEngine->ForceGarbageCollection(true);
 	// TODO：强制进行垃圾回收，参数为true，表示强制进行垃圾回收，可能会导致性能下降，但是可以保证内存的释放
 }
